@@ -2,7 +2,7 @@
     "name": "hft/timemachine",
     "type": "library",
     "description": "A simple way to work with date and hour in PHP.",
-    "keywords": ["time","hour","date","functions","easy"],
+    "keywords": ["~1.0.0",time","hour","date","functions","easy"],
     "homepage": "https://github.com/henriquefernandez/PHPTimeMachine.git",
     "license": "MIT",
     "authors": [
