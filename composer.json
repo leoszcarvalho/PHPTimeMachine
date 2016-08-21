@@ -1,7 +1,7 @@
 {
     "name": "hft/timemachine",
     "type": "library",
-    "description": "A simple way to work with dates and hours in PHP.",
+    "description": "A simple way to work with date and hour in PHP.",
     "keywords": ["time","hour","date","functions","easy"],
     "homepage": "https://github.com/henriquefernandez/PHPTimeMachine.git",
     "license": "MIT",
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4" : {
-            "hft\\timemachine\\" : "timemachine/"
+            "hft\\TimeMachine\\" : "timemachine/"
         }
     }
 }
