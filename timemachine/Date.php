@@ -8,7 +8,7 @@
 *     
 */
 
-namespace hft\timemachine;
+namespace hft\TimeMachine;
 
 
 class Date
