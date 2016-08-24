@@ -284,6 +284,53 @@ class Hour
 
     }
 
+    public function intervalShow($first, $second, $time = '01:00:00')
+    {
+        try {
+                
+            if (!$this->validate($first) || !$this->validate($time) || !$this->validate($second)) {
+
+                throw new \Exception("<p> Hour must be in format 'HH:MM:SS' / '23:59:59' , you passed: $first, $time, $second </p>");
+            }
+
+            if($time == '00:00:00'){
+
+                throw new \Exception("<p> Interval can't be 00:00:00 </p>");                
+            }
+
+            $interval = array();
+            $i = 0;
+            $interval[0]['show'] = date_format(date_create_from_format('H:i:s', $first), $this->config['show_format']);; 
+            $interval[0]['work'] = $first;
+
+            while ($this->compare($first, $second, '<')) {
+                
+                $i++;
+                
+                $first = $this->sum($first, $time);
+
+                if($first == '00:00:00'){
+
+                    break;
+                }
+
+                $interval[$i]['show'] = $this->toShow($first);
+                $interval[$i]['work'] = $first;
+            }
+
+            return $interval;
+
+
+        } catch(\Exception $e) {
+
+            echo $e->getTraceAsString();
+            die($e->getMessage());
+        }
+        
+        
+    }
+
+
     /**
      * @param string $class
      *
