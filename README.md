@@ -22,8 +22,34 @@ $ composer require hft/timemachine
 ## Usage
 
 ``` php
-$hour = new hft\timemachine\hour();
-echo $hour->interval('00:00:00','24:00:00');
+
+require 'vendor/autoload.php';
+
+$hour = new  hft\timemachine\Hour();
+$foo = $hour->interval('00:00:00','24:00:00');
+
+var_dump($foo);
+
+/*
+  array(24) {
+  [0] =>
+  string(8) "00:00:00"
+  [1] =>
+  string(8) "01:00:00"
+  [2] =>
+  string(8) "02:00:00"
+  [3] =>
+  string(8) "03:00:00"
+  [4] =>
+  string(8) "04:00:00"
+  [5] =>
+  string(8) "05:00:00"
+  [6] =>
+  string(8) "06:00:00"
+  [7] =>
+  string(8) "07:00:00"
+  ...
+
 ```
 
 ## Change log
