@@ -1,6 +1,6 @@
 # PHPTimeMachine
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Latest Version on Packagist][ico-version]][packagist.org/packages/hft/timemachine]
 
 [![Latest Version on Packagist][ico-version][https://packagist.org/packages/hft/timemachine]
 
